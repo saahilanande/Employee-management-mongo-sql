@@ -1,0 +1,35 @@
+CREATE TABLE employee (
+	emp_first varchar(255),
+    emp_last varchar(255),
+    emp_ssn int,
+	emp_birth varchar(255),
+    emp_address varchar(255),
+    emp_gender varchar(50),
+    emp_salary int,
+    mnger_ssn varchar(50),
+    emp_depno int,
+    PRIMARY KEY (emp_ssn)
+);
+
+CREATE TABLE department (
+	d_name varchar(255),
+    d_no int,
+	mng_ssn int,
+    mng_start_date varchar(50),
+    primary key (d_no)
+);
+
+CREATE TABLE project (
+	p_name varchar(255),
+    p_no int,
+	p_location varchar(50),
+    d_num int,
+    primary key (p_no)
+);
+
+create table workson
+(essn int,
+ pno int,
+ hours int,
+ primary key (essn,pno)
+ );
